@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "PersonHasseasontktAgebetween18to60"
 	dialect "mvel"
 	when
+		Person( age >= 18 )
+		subscription( type matches "full year" )
 	then
+		Quote fact0 = new Quote();
+		fact0.setPriceList( "150" );
+		insertLogical( fact0 );
 end
