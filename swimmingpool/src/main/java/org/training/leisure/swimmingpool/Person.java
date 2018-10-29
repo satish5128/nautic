@@ -16,6 +16,8 @@ public class Person implements java.io.Serializable
    private java.util.Date birtthDate;
    private java.lang.String surname;
 
+   private java.lang.String birthPlace;
+
    public Person()
    {
    }
@@ -80,9 +82,20 @@ public class Person implements java.io.Serializable
       this.surname = surname;
    }
 
+   public java.lang.String getBirthPlace()
+   {
+      return this.birthPlace;
+   }
+
+   public void setBirthPlace(java.lang.String birthPlace)
+   {
+      this.birthPlace = birthPlace;
+   }
+
    public Person(java.lang.String name, java.lang.String gender,
          java.lang.Integer age, java.math.BigDecimal standardPrice,
-         java.util.Date birtthDate, java.lang.String surname)
+         java.util.Date birtthDate, java.lang.String surname,
+         java.lang.String birthPlace)
    {
       this.name = name;
       this.gender = gender;
@@ -90,6 +103,7 @@ public class Person implements java.io.Serializable
       this.standardPrice = standardPrice;
       this.birtthDate = birtthDate;
       this.surname = surname;
+      this.birthPlace = birthPlace;
    }
 
 }
