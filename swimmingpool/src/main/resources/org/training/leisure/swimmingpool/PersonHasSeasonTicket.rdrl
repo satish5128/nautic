@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "PersonHasSeasonTicket"
 	dialect "mvel"
 	when
+		subscription( type matches "full year" )
+		Person( age >= 60 )
 	then
+		price fact0 = new price();
+		fact0.setAmount( 120B );
+		insertLogical( fact0 );
 end
