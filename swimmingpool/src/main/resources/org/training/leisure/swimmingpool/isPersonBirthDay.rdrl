@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "isPersonBirthDay"
 	dialect "mvel"
 	when
+		Person( birtthDate coincides "29-Oct-2018" )
 	then
+		Person fact0 = new Person();
+		fact0.setStandardPrice( 10B );
+		insertLogical( fact0 );
 end
