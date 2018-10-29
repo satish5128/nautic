@@ -2,7 +2,7 @@ package org.training.leisure.swimmingpool;
 
 import java.lang.Number;
 
-rule "isPersonLivingZurich"
+rule "SeasonTicketPrice"
 	dialect "mvel"
 	when
 	then
