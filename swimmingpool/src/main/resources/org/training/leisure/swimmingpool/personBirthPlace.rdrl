@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "personBirthPlace"
 	dialect "mvel"
 	when
+		Person( birthPlace matches "Zurich" )
 	then
+		price fact0 = new price();
+		fact0.setPriceType( "10% discount to this person" );
+		insertLogical( fact0 );
 end
