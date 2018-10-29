@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "isPersonisTooYoung"
 	dialect "mvel"
 	when
+		Person( age < 11 )
 	then
+		price fact0 = new price();
+		fact0.setDescription( "Age is Below 11 years, too young person, so he is suitable for free entry" );
+		insertLogical( fact0 );
 end
