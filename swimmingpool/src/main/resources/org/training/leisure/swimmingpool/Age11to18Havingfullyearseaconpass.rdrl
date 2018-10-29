@@ -7,7 +7,7 @@ rule "Age11to18Havingfullyearseaconpass"
 	when
 		Person( age >= 11 )
 		Person( age <= 18 )
-		subscription( type matches "full year" )
+		Period( seasonType matches "full year" )
 	then
 		Quote fact0 = new Quote();
 		fact0.setPriceList( "110" );
