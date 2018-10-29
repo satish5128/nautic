@@ -6,7 +6,8 @@ rule "PersonHasseasontktAgebetween18to60"
 	dialect "mvel"
 	when
 		Person( age >= 18 )
-		subscription( type matches "full year" )
+		Person( age <= 60 )
+		Period( seasonType matches "full year" )
 	then
 		Quote fact0 = new Quote();
 		fact0.setPriceList( "150" );
