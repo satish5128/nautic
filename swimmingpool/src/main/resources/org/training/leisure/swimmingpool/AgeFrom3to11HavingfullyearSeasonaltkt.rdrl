@@ -9,4 +9,7 @@ rule "AgeFrom3to11HavingfullyearSeasonaltkt"
 		Person( age <= 11 )
 		Period( seasonType matches "full year" )
 	then
+		Quote fact0 = new Quote();
+		fact0.setPriceList( "80" );
+		insertLogical( fact0 );
 end
