@@ -5,5 +5,8 @@ import java.lang.Number;
 rule "AgeFrom3to11HavingfullyearSeasonaltkt"
 	dialect "mvel"
 	when
+		Person( age >= 3 )
+		Person( age <= 11 )
+		Period( seasonType matches "full year" )
 	then
 end
