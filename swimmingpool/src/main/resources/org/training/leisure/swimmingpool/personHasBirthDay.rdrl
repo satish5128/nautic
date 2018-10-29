@@ -5,5 +5,9 @@ import java.lang.Number;
 rule "personHasBirthDay"
 	dialect "mvel"
 	when
+		Person( birtthDate coincides "29-Oct-2018" )
 	then
+		price fact0 = new price();
+		fact0.setPriceType( "Discount 10%" );
+		insertLogical( fact0 );
 end
