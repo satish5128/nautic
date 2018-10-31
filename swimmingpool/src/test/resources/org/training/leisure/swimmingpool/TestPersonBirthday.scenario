@@ -59,6 +59,6 @@
     <imports/>
   </imports>
   <ksessions>
-    <string>defaultKieSession</string>
+    <string>SwimmingPoolKBS</string>
   </ksessions>
 </scenario>
